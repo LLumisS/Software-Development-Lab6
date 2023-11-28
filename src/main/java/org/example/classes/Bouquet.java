@@ -2,8 +2,6 @@ package org.example.classes;
 
 import org.example.classes.flowers.Flower;
 
-import java.util.ArrayList;
-
 public class Bouquet {
     private final Flower[] flowers;
     private final Accessory[] accessories;

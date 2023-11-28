@@ -2,6 +2,8 @@ package org.example.classes;
 
 import org.example.classes.flowers.Flower;
 
+import java.util.ArrayList;
+
 public class Bouquet {
     private final Flower[] flowers;
     private final Accessory[] accessories;
@@ -24,6 +26,26 @@ public class Bouquet {
         return price;
     }
 
+    private String getFlowerInfo(Flower flower) {
+        return flower.getName() + "\t" +
+                flower.getFreshness() + "\t" +
+                flower.getLength() + "\t" +
+                flower.getFreshness();
+    }
+
+    public String getFlowersByLength(double from, double to) {
+        StringBuilder result = new StringBuilder();
+
+        for (Flower flower : flowers) {
+            double length = flower.getLength();
+            if (from <= length && length <= to) {
+                result.append(getFlowerInfo(flower));
+            }
+        }
+
+        return result.toString();
+    }
+
     public void sortFlowersByFreshness() {
         int n = flowers.length;
         boolean swapped = false;
@@ -43,14 +65,11 @@ public class Bouquet {
         }
     }
 
-    public String showBouquet() {
+    public String getBouquet() {
         StringBuilder bouquet = new StringBuilder();
 
         for (Flower flower : flowers) {
-            String name = flower.getName();
-            int freshness =  flower.getFreshness();
-            double price =  flower.getPrice();
-            bouquet.append(name).append("\t").append(freshness).append("\t").append(price);
+            bouquet.append(getFlowerInfo(flower));
         }
         for (Accessory accessory : accessories) {
             String name = accessory.getName();

@@ -3,8 +3,8 @@ package org.example.classes;
 import org.example.classes.flowers.Flower;
 
 public class Bouquet {
-    private Flower[] flowers;
-    private Accessory[] accessories;
+    private final Flower[] flowers;
+    private final Accessory[] accessories;
 
     public Bouquet(Flower[] flowers, Accessory[] accessories) {
         this.flowers = flowers;

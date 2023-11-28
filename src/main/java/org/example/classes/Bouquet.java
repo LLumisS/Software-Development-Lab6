@@ -11,6 +11,10 @@ public class Bouquet {
         this.accessories = accessories;
     }
 
+    /**
+     *  calculates a price of a bouquet
+     *  depends on flowers/accessories price
+     */
     public double getPrice() {
         double price = 0;
 
@@ -24,6 +28,10 @@ public class Bouquet {
         return price;
     }
 
+    /**
+     *  supporting method
+     *  returns String of flower's info
+     */
     private String getFlowerInfo(Flower flower) {
         return flower.getName() + "\t" +
                 flower.getFreshness() + "\t" +
@@ -31,6 +39,10 @@ public class Bouquet {
                 flower.getPrice() + "\n";
     }
 
+    /**
+     *  returns String of flowers with info
+     *  which length fits the given range
+     */
     public String getFlowersByLength(double from, double to) {
         StringBuilder result = new StringBuilder();
 
@@ -44,6 +56,9 @@ public class Bouquet {
         return result.toString();
     }
 
+    /**
+     *  bubble sort of flowers
+     */
     public void sortFlowersByFreshness() {
         int n = flowers.length;
         boolean swapped = false;
@@ -63,6 +78,9 @@ public class Bouquet {
         }
     }
 
+    /**
+     *  returns String of flowers and accessories with info
+     */
     public String getBouquet() {
         StringBuilder bouquet = new StringBuilder();
 

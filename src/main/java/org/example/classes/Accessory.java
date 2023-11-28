@@ -15,6 +15,9 @@ public class Accessory {
         this.price = price;
     }
 
+    /**
+     *  sets non-negative price
+     */
     public void setPrice(double price) {
         if (price < 0) {
             throw new InputMismatchException("Cannot set negative price");

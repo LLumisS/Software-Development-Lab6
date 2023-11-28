@@ -5,6 +5,7 @@ import org.example.classes.flowers.*;
 
 public class Main {
     public static void main(String[] args) {
+        // Given
         Rose rose = new Rose(7, 30);
         Iris iris = new Iris(5, 25.5);
         Tulip tulip = new Tulip(10, 35, 23.99);
@@ -15,6 +16,7 @@ public class Main {
 
         Bouquet bouquet = new Bouquet(flowers, accessories);
 
+        // Demonstration
         System.out.println(bouquet.getBouquet() + "\n");
 
         bouquet.sortFlowersByFreshness();

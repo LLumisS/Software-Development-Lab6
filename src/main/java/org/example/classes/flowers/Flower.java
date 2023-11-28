@@ -19,6 +19,9 @@ public abstract class Flower {
 
     public abstract String getName();
 
+    /**
+     *  withers a flower if it's alive
+     */
     public void wither() {
         if (freshness == 0) {
             throw new IllegalStateException("This flower is already withered...");
@@ -26,6 +29,9 @@ public abstract class Flower {
         freshness--;
     }
 
+    /**
+     *  cuts a piece of flower of given length
+     */
     public void cut(int length) {
         if (length < 0) {
             throw new InputMismatchException("Cannot cut negative length");
@@ -34,6 +40,9 @@ public abstract class Flower {
         this.length -= length;
     }
 
+    /**
+     *  sets non-negative price
+     */
     public void setPrice(double price) {
         if (price < 0) {
             throw new InputMismatchException("Cannot set negative price");

@@ -19,6 +19,11 @@ public class Main {
         // Demonstration
         System.out.println(bouquet.getBouquet() + "\n");
 
+        tulip.wither();
+        tulip.setPrice(20.49);
+        rose.cut(5.5);
+        ribbon.setPrice(3.99);
+
         bouquet.sortFlowersByFreshness();
         System.out.println(bouquet.getBouquet() + "\n");
 

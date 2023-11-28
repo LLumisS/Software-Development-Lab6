@@ -90,9 +90,9 @@ public class Bouquet {
         for (Accessory accessory : accessories) {
             String name = accessory.getName();
             double price = accessory.getPrice();
-            bouquet.append(name).append("\t").append("\t").append(price).append("\n");
+            bouquet.append(name).append("\t\t\t\t").append(price).append("\n");
         }
-        bouquet.append("Total price: ").append(getPrice());
+        bouquet.append("\tTotal price: ").append(getPrice());
 
         return bouquet.toString();
     }

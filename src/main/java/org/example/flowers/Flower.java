@@ -8,8 +8,8 @@ public abstract class Flower {
     private double price;
 
     public Flower(int freshness, double length, double price) {
-        if (length <= 0 || freshness <= 0 || price < 0) {
-            throw new InputMismatchException("Expected positive numbers");
+        if (length <= 0 || freshness < 0 || price < 0) {
+            throw new InputMismatchException("Expected non-negative numbers");
         }
 
         this.freshness = freshness;

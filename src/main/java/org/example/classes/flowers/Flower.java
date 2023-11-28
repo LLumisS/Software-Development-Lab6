@@ -1,4 +1,4 @@
-package org.example.flowers;
+package org.example.classes.flowers;
 
 import java.util.InputMismatchException;
 
@@ -17,14 +17,13 @@ public abstract class Flower {
         this.price = price;
     }
 
-    public abstract void smell();
+    public abstract String getName();
 
     public void wither() {
         if (freshness == 0) {
-            System.out.println("This flower is already withered...");
-        } else {
-            freshness--;
+            throw new IllegalStateException("This flower is already withered...");
         }
+        freshness--;
     }
 
     public void cut(int length) {

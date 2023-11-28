@@ -1,6 +1,4 @@
-package org.example.flowers;
-
-import java.util.InputMismatchException;
+package org.example.classes.flowers;
 
 public class Tulip extends Flower{
     public Tulip(int freshness, double length) {
@@ -12,7 +10,7 @@ public class Tulip extends Flower{
     }
 
     @Override
-    public void smell() {
-        System.out.println("This flower smells tulip <3");
+    public String getName() {
+        return "Tulip";
     }
 }

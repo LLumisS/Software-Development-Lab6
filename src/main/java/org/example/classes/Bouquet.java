@@ -30,7 +30,7 @@ public class Bouquet {
         return flower.getName() + "\t" +
                 flower.getFreshness() + "\t" +
                 flower.getLength() + "\t" +
-                flower.getFreshness();
+                flower.getPrice() + "\n";
     }
 
     public String getFlowersByLength(double from, double to) {
@@ -74,7 +74,7 @@ public class Bouquet {
         for (Accessory accessory : accessories) {
             String name = accessory.getName();
             double price = accessory.getPrice();
-            bouquet.append(name).append("\t").append("\t").append(price);
+            bouquet.append(name).append("\t").append("\t").append(price).append("\n");
         }
         bouquet.append("Total price: ").append(getPrice());
 

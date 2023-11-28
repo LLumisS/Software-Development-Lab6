@@ -32,7 +32,7 @@ public abstract class Flower {
     /**
      *  cuts a piece of flower of given length
      */
-    public void cut(int length) {
+    public void cut(double length) {
         if (length < 0) {
             throw new InputMismatchException("Cannot cut negative length");
         }

@@ -17,8 +17,6 @@ public abstract class Flower {
         this.price = price;
     }
 
-    public abstract String getName();
-
     /**
      *  withers a flower if it's alive
      */
@@ -54,6 +52,8 @@ public abstract class Flower {
 
         this.price = price;
     }
+
+    public abstract String getName();
 
     public int getFreshness() {
         return freshness;

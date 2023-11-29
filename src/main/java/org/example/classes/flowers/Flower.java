@@ -36,8 +36,12 @@ public abstract class Flower {
         if (length < 0) {
             throw new InputMismatchException("Cannot cut negative length");
         }
+        double result = this.length - length;
+        if (result <= 0) {
+            throw new IllegalStateException("Cannot cut this much");
+        }
 
-        this.length -= length;
+        this.length = result;
     }
 
     /**
